@@ -33,7 +33,6 @@ public class OAuth2UserCustomService extends DefaultOAuth2UserService {
                 .map(entity -> entity.update(name))
                 .orElse(User.builder()
                         .email(email)
-                        .password("") // 패스워드 기본값 설정
                         .nickname(name)
                         .build());
 
